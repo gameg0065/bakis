@@ -1,3 +1,5 @@
+using UnitTestGeneration.Easy.App;
+
 namespace UnitTestGeneration.Easy.Tests;
 
 public class UnitTest1

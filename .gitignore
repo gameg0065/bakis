@@ -57,6 +57,9 @@ x64/
 *.pidb
 *.scc
 
+.sonarqube
+dotCover*
+
 # Visual C++ cache files
 ipch/
 *.aps

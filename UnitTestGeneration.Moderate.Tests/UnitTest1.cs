@@ -1,3 +1,5 @@
+using UnitTestGeneration.Moderate.App;
+
 namespace UnitTestGeneration.Moderate.Tests;
 
 
