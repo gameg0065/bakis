@@ -21,4 +21,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\UnitTestGeneration.Difficult.App\UnitTestGeneration.Difficult.App.csproj" />
+    </ItemGroup>
+
 </Project>
