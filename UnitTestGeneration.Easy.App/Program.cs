@@ -11,7 +11,7 @@ internal abstract class Program
 
 public static class LoanApplication
 {
-    public static uint FindMonthlyPaymentSize(uint firstPersonSalary, uint secondPersonSalary)
+    public static int FindMonthlyPaymentSize(ushort firstPersonSalary, ushort secondPersonSalary)
     {
         var sum = (firstPersonSalary + secondPersonSalary) / 10 * 3;
         return sum;
