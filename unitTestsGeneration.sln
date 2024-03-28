@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Cloude", "UnitTestGeneration.Moderate.Tests.Cloude\UnitTestGeneration.Moderate.Tests.Cloude.csproj", "{F3E5CC8D-94F7-406A-A5E7-DB77873EC6E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini", "UnitTestGeneration.Difficult.Tests.Gemini\UnitTestGeneration.Difficult.Tests.Gemini.csproj", "{7495BF9C-AEA8-414C-A628-8515287CF885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Cloude", "UnitTestGeneration.Difficult.Tests.Cloude\UnitTestGeneration.Difficult.Tests.Cloude.csproj", "{1D88D930-A22C-423E-90F5-8BF1B112F33C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.ChatGPT", "UnitTestGeneration.Difficult.Tests.ChatGPT\UnitTestGeneration.Difficult.Tests.ChatGPT.csproj", "{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +90,17 @@ Global
 		{F3E5CC8D-94F7-406A-A5E7-DB77873EC6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E5CC8D-94F7-406A-A5E7-DB77873EC6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E5CC8D-94F7-406A-A5E7-DB77873EC6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7495BF9C-AEA8-414C-A628-8515287CF885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7495BF9C-AEA8-414C-A628-8515287CF885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7495BF9C-AEA8-414C-A628-8515287CF885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7495BF9C-AEA8-414C-A628-8515287CF885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
