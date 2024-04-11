@@ -2,7 +2,7 @@ using UnitTestGeneration.Easy.App;
 
 namespace UnitTestGeneration.Easy.Tests.ChatGPT;
 
-public class UnitTest1
+public class RemoveArrayDuplicatesTests
 {
     [Theory]
     [InlineData(0, 0, 0)] // Edge case: both salaries are zero
