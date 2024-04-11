@@ -4,20 +4,43 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class SqrtFunctionTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestPositiveNumber()
     {
-        // Arrange
+        decimal x = 25;
+        decimal expectedResult = 5; 
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        decimal result = SqrtFunction.Sqrt(x);
+        Assert.Equal(expectedResult, result); 
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void TestZero()
+    {
+        decimal x = 0;
+        decimal expectedResult = 0;
+
+        decimal result = SqrtFunction.Sqrt(x);
+        Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void TestNegativeNumber()
+    {
+        decimal x = -10;
+        Assert.Throws<OverflowException>(() => SqrtFunction.Sqrt(x));
+    }
+
+    [Fact]
+    public void TestDecimalPrecision()
+    {
+        decimal x = 2; 
+        decimal epsilon = 0.0001M; // Tolerance for precision
+        decimal expectedResult = 1.4142M; // Approximate 
+
+        decimal result = SqrtFunction.Sqrt(x, epsilon);
+
+        // Check if the result is within the specified tolerance
+        Assert.InRange(result, expectedResult - epsilon, expectedResult + epsilon); 
     }
 }

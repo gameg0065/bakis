@@ -4,20 +4,42 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class GeometricShapesTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestDefaultValues()
     {
-        // Arrange
+        var expectedArea = 264.0;
+        var expectedPerimeter = 68.0;
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        var result = GeometricShapes.RectangleShape.Area();
+        Assert.Equal(expectedArea, result.Item1);
+        Assert.Equal(expectedPerimeter, result.Item2);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void TestCustomValues()
+    {
+        float length = 5.5f;
+        float breadth = 8f;
+        var expectedArea = 44.0;
+        var expectedPerimeter = 27.0;
+
+        var result = GeometricShapes.RectangleShape.Area(length, breadth);
+        Assert.Equal(expectedArea, result.Item1);
+        Assert.Equal(expectedPerimeter, result.Item2);
+    }
+
+    [Fact]
+    public void TestZeroValues()
+    {
+        // Should likely throw an ArgumentException, 
+        // but you'll need to adjust code if that's desired behavior
+        Assert.Throws<ArgumentException>(() => GeometricShapes.RectangleShape.Area(0, 0)); 
+    }
+
+    [Fact]
+    public void TestNegativeValues()
+    {
+        // Consider how to handle negative values 
+        Assert.Throws<ArgumentException>(() => GeometricShapes.RectangleShape.Area(-1, 5)); 
     }
 }

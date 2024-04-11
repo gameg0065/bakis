@@ -4,20 +4,35 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class LoadApplicationTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestTypicalSalaries()
     {
-        // Arrange
+        ushort firstPersonSalary = 2500;
+        ushort secondPersonSalary = 3000;
+        int expectedPayment = 1650;
 
-        // Act
         int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        Assert.Equal(expectedPayment, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void TestZeroSalary()
+    {
+        ushort firstPersonSalary = 0;
+        ushort secondPersonSalary = 0;
+        int expectedPayment = 0;
+
+        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        Assert.Equal(expectedPayment, result);
+    }
+
+    [Fact]
+    public void TestMaximumSalary() 
+    {
+        ushort firstPersonSalary = ushort.MaxValue;
+        ushort secondPersonSalary = ushort.MaxValue;
+
+        // Potential overflow - Might want to reconsider calculation logic
+        Assert.Throws<OverflowException>(() => LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary)); 
     }
 }

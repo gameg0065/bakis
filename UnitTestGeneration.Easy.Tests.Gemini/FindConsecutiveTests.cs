@@ -4,20 +4,60 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class FindConsecutiveTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestWithConsecutiveOnes()
     {
-        // Arrange
+        int[] nums = { 1, 1, 0, 1, 1, 1 };
+        int expected = 3;
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
-
-        // Assert
+        int result = FindConsecutive.FindMaxConsecutiveOnes(nums);
         Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestWithoutConsecutiveOnes()
+    {
+        int[] nums = { 0, 0, 0 };
+        int expected = 0;
+
+        int result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestAllOnes()
+    {
+        int[] nums = { 1, 1, 1, 1 };
+        int expected = 4;
+
+        int result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestSingleOne()
+    {
+        int[] nums = { 1 };
+        int expected = 1;
+
+        int result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestEmptyArray()
+    {
+        int[] nums = new int[0];
+        int expected = 0;
+
+        int result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestNullArray()
+    {
+        int[] nums = null;
+        Assert.Throws<ArgumentNullException>(() => FindConsecutive.FindMaxConsecutiveOnes(nums));
     }
 }

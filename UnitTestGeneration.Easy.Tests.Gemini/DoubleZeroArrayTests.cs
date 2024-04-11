@@ -4,20 +4,50 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class DoubleZeroArrayTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestWithZeros()
     {
-        // Arrange
+        int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };
+        int[] expected = { 1, 0, 0, 2, 3, 0, 0, 4 };
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
-
-        // Assert
+        var result = DoubleZeroArray.DuplicateZeros(input);
         Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestWithoutZeros()
+    {
+        int[] input = { 1, 2, 3 };
+        int[] expected = { 1, 2, 3 };
+
+        var result = DoubleZeroArray.DuplicateZeros(input);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestAllZeros()
+    {
+        int[] input = { 0, 0, 0, 0 };
+        int[] expected = { 0, 0, 0, 0 };
+
+        var result = DoubleZeroArray.DuplicateZeros(input);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestEmptyArray()
+    {
+        int[] input = new int[0];
+        int[] expected = new int[0];
+
+        var result = DoubleZeroArray.DuplicateZeros(input);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestNullArray()
+    {
+        int[] input = null;
+        Assert.Throws<ArgumentNullException>(() => DoubleZeroArray.DuplicateZeros(input));
     }
 }

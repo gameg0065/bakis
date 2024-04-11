@@ -4,20 +4,45 @@ namespace UnitTestGeneration.Easy.Tests.Gemini;
 
 public class EvaluationsTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void TestSimpleAddition()
     {
-        // Arrange
+        string expression = "2 + 3";
+        decimal expected = 5;
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        decimal result = Evaluations.Evaluate(expression);
+        Assert.Equal(expected, result);
+    }
 
-        // Assert
+    [Fact]
+    public void TestSimpleSubtraction()
+    {
+        string expression = "5 - 2";
+        decimal expected = 3;
+
+        decimal result = Evaluations.Evaluate(expression);
+        Assert.Equal(expected, result);
+    }
+
+    // ... Tests for multiplication, division
+
+    [Fact]
+    public void TestOrderOfOperations()
+    {
+        string expression = "2 + 3 * 4";
+        decimal expected = 14;
+
+        decimal result = Evaluations.Evaluate(expression);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void TestInvalidExpression()
+    {
+        string expression = "2 + x"; 
+        decimal expected = 0; // Assuming FormatException behavior
+
+        decimal result = Evaluations.Evaluate(expression);
         Assert.Equal(expected, result);
     }
 }
