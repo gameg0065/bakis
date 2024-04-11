@@ -3,11 +3,11 @@ namespace UnitTestGeneration.Moderate.App;
 // https://github.com/VictorDolzan/LeetCode/blob/main/LeetCode/Exercicios.cs
 // cy = 8, co = 22
 
-public class CheckIfDoubleExists
+public static class CheckIfDoubleExists
 {
     #region 14º Check If N and Its Double Exist
 
-    public bool CheckIfExists(int[] arr)
+    public static bool CheckIfExists(int[] arr)
     {
         var index = 0;
         

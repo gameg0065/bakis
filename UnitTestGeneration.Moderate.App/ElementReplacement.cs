@@ -3,11 +3,11 @@ namespace UnitTestGeneration.Moderate.App;
 // https://github.com/VictorDolzan/LeetCode/blob/main/LeetCode/Exercicios.cs
 // cy = 6, co 16
 
-public class ElementReplacement
+public static class ElementReplacement
 {
     #region 16º Replace Elements with Greatest Element on Right Side
 
-    public int[] ReplaceElements(int[] arr)
+    public static int[] ReplaceElements(int[] arr)
     {
         // { 17, 18, 5, 4, 6, 1 };
         var newArray = new int[arr.Length];

@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UnitTestGeneration.Easy.Tests\UnitTestGeneration.Easy.Tests.csproj" />
+      <ProjectReference Include="..\UnitTestGeneration.Easy.App\UnitTestGeneration.Easy.App.csproj" />
     </ItemGroup>
 
 </Project>
