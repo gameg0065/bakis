@@ -3,11 +3,11 @@ namespace UnitTestGeneration.Easy.App;
 // https://github.com/VictorDolzan/LeetCode/blob/main/LeetCode/Exercicios.cs
 // cy = 4, co = 6 
 
-public class FindConsecutive
+public static class FindConsecutive
 {
     #region 6º Max Consecutives Ones
 
-    public int FindMaxConsecutiveOnes(int[] nums)
+    public static int FindMaxConsecutiveOnes(int[] nums)
     {
         var maxLentgh = new List<int>();
         var maxNumber = 0;

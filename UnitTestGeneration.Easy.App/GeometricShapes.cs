@@ -1,7 +1,7 @@
 namespace UnitTestGeneration.Easy.App;
 // https://github.com/SyedZeenath/CSharp_codes/tree/master/GeometricShapes/cs_con_GeometricShapes
 // cy = 4, co = 0
-public class GeometricShapes
+public static class GeometricShapes
 {
     public static class RectangleShape
     {

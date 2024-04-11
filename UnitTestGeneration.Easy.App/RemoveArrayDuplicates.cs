@@ -2,9 +2,9 @@ namespace UnitTestGeneration.Easy.App;
 
 // https://github.com/VictorDolzan/LeetCode/blob/main/LeetCode/Exercicios.cs
 // cy = 3, co = 3
-public class RemoveArrayDuplicates
+public static class RemoveArrayDuplicates
 {
-    public int RemoveDuplicates(int[] nums)
+    public static int RemoveDuplicates(int[] nums)
     {
         // { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
 

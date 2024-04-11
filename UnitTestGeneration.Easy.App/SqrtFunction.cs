@@ -2,7 +2,7 @@ namespace UnitTestGeneration.Easy.App;
 
 // https://github.com/onurcanari/Calculator/blob/master/Calculator.cs
 // cy = 4, co = 4
-public class SqrtFunction
+public static class SqrtFunction
 {
     public static decimal Sqrt(decimal x, decimal epsilon = 0.0M) {
         if(x<0) throw new OverflowException("Cannot calculate square root from a negative number");

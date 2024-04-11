@@ -1,6 +1,6 @@
 namespace UnitTestGeneration.Easy.App;
 
-public class MultiCardsCheck
+public static class MultiCardsCheck
 {
     private static int CheckForMultiCards(string[] valueCounters, int valueCount)
     {

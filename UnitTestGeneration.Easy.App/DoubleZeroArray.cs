@@ -3,9 +3,9 @@ namespace UnitTestGeneration.Easy.App;
 // https://github.com/VictorDolzan/LeetCode/blob/main/LeetCode/Exercicios.cs
 // cy = 3, co = 4
 
-public class DoubleZeroArray
+public static class DoubleZeroArray
 {
-    public void DuplicateZeros(int[] arr)
+    public static int[] DuplicateZeros(int[] arr)
     {
         var listArray = new List<int>();
         var doubleZero = new int[] {0, 0};
@@ -22,6 +22,6 @@ public class DoubleZeroArray
             }
         }
 
-        listArray.ToArray();
+        return listArray.ToArray();
     }
 }

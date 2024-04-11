@@ -2,7 +2,7 @@ namespace UnitTestGeneration.Easy.App;
 
 //https://github.com/exc-jdbi/BigPrimeGenerators/blob/main/Code/BigPrimeGenerator/BigPrimeGenerator.cs
 // cy = 4, co = 4
-public class IsNumber
+public static class IsNumber
 {
     public static bool IsNumeric(string number)
     {

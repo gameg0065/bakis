@@ -2,7 +2,7 @@ namespace UnitTestGeneration.Easy.App;
 
 //https://github.com/scourii/HieloCalculator/blob/main/Hielo/Evaluation.cs
 // cy = 1, co = 1
-public class Evaluations
+public static class Evaluations
 {
     public static decimal Evaluate(string expression)
     {
