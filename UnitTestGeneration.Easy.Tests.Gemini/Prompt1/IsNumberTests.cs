@@ -5,19 +5,35 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 public class IsNumberTests
 {
     [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [InlineData("123", true)]
+    [InlineData("-789", true)]
+    [InlineData("3.14159", true)]
+    [InlineData("1.23e+4", true)]
+    // ... more valid cases
+    public void ValidNumbers_ReturnTrue(string number, bool expected)
     {
-        // Arrange
+        bool result = IsNumber.IsNumeric(number);
+        Assert.Equal(expected, result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Theory]
+    [InlineData("abc", false)]
+    [InlineData("123xyz", false)]
+    [InlineData("$%^&*", false)]
+    [InlineData("12 34", false)]
+    // ... more invalid cases
+    public void InvalidNumbers_ReturnFalse(string number, bool expected)
+    {
+        bool result = IsNumber.IsNumeric(number);
+        Assert.Equal(expected, result);
+    }  
 
-        // Assert
+    [Theory]
+    [InlineData("", false)]
+    [InlineData(null, false)]
+    public void EdgeCases_ReturnFalse(string number, bool expected)
+    {
+        bool result = IsNumber.IsNumeric(number);
         Assert.Equal(expected, result);
     }
 }

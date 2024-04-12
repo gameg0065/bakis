@@ -4,20 +4,22 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 
 public class GeometricShapesTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    public class RectangleTests
     {
-        // Arrange
+        [Fact]
+        public void DefaultArea_CalculatesCorrectly() 
+        {
+            var result = GeometricShapes.RectangleShape.Area();
+            Assert.Equal(264, result.Item1);  // Area: 12 * 22
+            Assert.Equal(68, result.Item2);   // Perimeter: 2 * (12 + 22)
+        }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
-
-        // Assert
-        Assert.Equal(expected, result);
+        [Fact]
+        public void CustomArea_CalculatesCorrectly() 
+        {
+            var result = GeometricShapes.RectangleShape.Area(5, 8);
+            Assert.Equal(40, result.Item1);     // Area: 5 * 8
+            Assert.Equal(26, result.Item2);     // Perimeter: 2 * (5 + 8)
+        }
     }
 }

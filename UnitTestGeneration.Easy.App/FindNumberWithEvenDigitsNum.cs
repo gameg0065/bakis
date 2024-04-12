@@ -6,11 +6,9 @@ namespace UnitTestGeneration.Easy.App;
 public static class FindNumberWithEvenDigitsNum
 {
     #region 7º Find Numbers with Even Number of Digits
-
     public static int FindNumbers(int[] nums)
     {
         return nums.Select(num => num.ToString().ToCharArray()).Count(numCharArray => numCharArray.Length % 2 == 0);
     }
-
     #endregion
 }

@@ -4,20 +4,29 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 
 public class RemoveArrayDuplicatesTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void ArrayWithDuplicates_RemovesCorrectly()
     {
-        // Arrange
+        int[] nums = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+        int expectedLength = 5; 
+        int[] expectedArray = new int[] { 0, 1, 2, 3, 4 }; 
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        int newLength = RemoveArrayDuplicates.RemoveDuplicates(nums);
 
-        // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expectedLength, newLength);
+        Assert.Equal(expectedArray, nums.Take(expectedLength)); 
+    }
+
+    [Fact]
+    public void ArrayWithUniqueValues_RemainsUnchanged()
+    {
+        int[] nums = new int[] { 1, 2, 3, 5, 7 };
+        int expectedLength = 5; 
+        int[] expectedArray = new int[] { 1, 2, 3, 5, 7 }; 
+
+        int newLength = RemoveArrayDuplicates.RemoveDuplicates(nums);
+
+        Assert.Equal(expectedLength, newLength);
+        Assert.Equal(expectedArray, nums); 
     }
 }

@@ -4,20 +4,43 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 
 public class FindNumberWithEvenDigitsNumTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void EmptyArray_ReturnsZero()
     {
-        // Arrange
+        int[] nums = new int[] { };
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
+        Assert.Equal(0, result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void SingleEvenDigitNumber_ReturnsOne()
+    {
+        int[] nums = new int[] { 1234 };
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
+        Assert.Equal(1, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void SingleOddDigitNumber_ReturnsZero()
+    {
+        int[] nums = new int[] { 123 };
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
+        Assert.Equal(0, result);
+    }
+
+    [Fact]
+    public void MixedNumbers_ReturnsCorrectCount()
+    {
+        int[] nums = new int[] { 12, 345, 2, 654321 };
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
+        Assert.Equal(2, result); // 12 and 654321 have even digits
+    }
+
+    [Fact]
+    public void LargeNumbers_ReturnsCorrectCount()
+    {
+        int[] nums = new int[] { 1234567, 87654321, 4444 };
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
+        Assert.Equal(2, result); 
     }
 }
