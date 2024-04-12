@@ -1,8 +1,8 @@
 using UnitTestGeneration.Easy.App;
 
-namespace UnitTestGeneration.Easy.Tests.Cloude;
+namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
-public class FindNumberWithEvenDigitsNum
+public class FindNumberWithEvenDigitsNumTests
 {
     [Theory]
     [InlineData(0, 0, 0)] // Edge case: both salaries are zero

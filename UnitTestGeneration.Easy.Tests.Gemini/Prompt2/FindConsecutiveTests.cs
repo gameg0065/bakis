@@ -1,6 +1,6 @@
 using UnitTestGeneration.Easy.App;
 
-namespace UnitTestGeneration.Easy.Tests.Gemini;
+namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt2;
 
 public class FindConsecutiveTests
 {
