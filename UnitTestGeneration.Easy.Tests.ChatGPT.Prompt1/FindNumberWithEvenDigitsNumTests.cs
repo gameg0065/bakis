@@ -1,3 +1,5 @@
+using UnitTestGeneration.Easy.App;
+
 namespace UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1;
 
 public class FindNumberWithEvenDigitsNumTests
@@ -9,16 +11,12 @@ public class FindNumberWithEvenDigitsNumTests
         int[] nums = { };
 
         // Act
-        int result = FindNumberWithEvenDigitsNumTests.FindNumbers(nums);
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
 
         // Assert
         Assert.Equal(0, result);
     }
-
-    private static int FindNumbers(int[] nums)
-    {
-        throw new NotImplementedException();
-    }
+    
 
     [Theory]
     [InlineData(new int[] { 1, 22, 333, 4444 }, 2)] // Two numbers with even digits: 22, 4444
@@ -27,7 +25,7 @@ public class FindNumberWithEvenDigitsNumTests
     public void FindNumbers_ShouldReturnCorrectCount(int[] nums, int expected)
     {
         // Act
-        int result = FindNumberWithEvenDigitsNumTests.FindNumbers(nums);
+        int result = FindNumberWithEvenDigitsNum.FindNumbers(nums);
 
         // Assert
         Assert.Equal(expected, result);

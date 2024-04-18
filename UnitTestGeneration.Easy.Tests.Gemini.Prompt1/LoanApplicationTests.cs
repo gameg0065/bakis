@@ -1,4 +1,4 @@
-using UnitTestGeneration.Moderate.App;
+using UnitTestGeneration.Easy.App;
 
 namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 
