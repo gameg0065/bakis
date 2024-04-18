@@ -4,6 +4,7 @@ using System.Text;
 namespace UnitTestGeneration.Difficult.App;
 // https://github.com/LandSharkFive/SimpleChaCha/blob/main/ChaChaOne/Util.cs
 // cy = 20, co = 16
+
 public class ChaCha
 {
         // The input is 64 bytes (512 bits).
