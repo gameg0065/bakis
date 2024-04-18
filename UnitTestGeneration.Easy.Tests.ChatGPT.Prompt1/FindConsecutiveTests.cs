@@ -1,6 +1,4 @@
-using UnitTestGeneration.Easy.App;
-
-namespace UnitTestGeneration.Easy.Tests.ChatGPT;
+namespace UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1;
 
 public class FindConsecutiveTests
 {
