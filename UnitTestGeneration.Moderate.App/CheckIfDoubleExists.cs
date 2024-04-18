@@ -10,7 +10,6 @@ public static class CheckIfDoubleExists
     public static bool CheckIfExists(int[] arr)
     {
         var index = 0;
-        
         if (arr.Length != 0)
         {
             foreach (var item in arr)
@@ -23,7 +22,6 @@ public static class CheckIfDoubleExists
                         return true;
                     }
                 }
-
                 if (item == 0)
                 {
                     for (int cont = index + 1; cont < arr.Length; cont++)
@@ -34,12 +32,9 @@ public static class CheckIfDoubleExists
                         }
                     }
                 }
-
                 index++;
             }
-        
         }
-        
         return false;
     }
     #endregion

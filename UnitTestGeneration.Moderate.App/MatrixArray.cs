@@ -7,10 +7,8 @@ public class MatrixArray
     public static void Matrix()
     {
         string[,] matrixArray = new string[6, 6];
-
         int matrixWidth = matrixArray.GetLength(0);
         int matrixHeight = matrixArray.GetLength(1);
-
         if (matrixHeight > 0 && matrixWidth > 0)
         {
             for (int col = 0; col < matrixWidth; col++)

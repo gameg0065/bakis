@@ -6,14 +6,12 @@ public static class EnumerableExtensions
     public static bool SequenceEqualOrderIgnore<T>(this IEnumerable<T> first, IEnumerable<T> second, IEqualityComparer<T> comparer)
     {
         if (first is null || second is null) return false;
-
         Dictionary<T, int>? dict = new Dictionary<T, int>(comparer);
         foreach (T element in first)
         {
             dict.TryGetValue(element, out int count);
             dict[element] = count + 1;
         }
-
         foreach (T element in second)
         {
             if (!dict.TryGetValue(element, out int count))
@@ -23,10 +21,8 @@ public static class EnumerableExtensions
             else
                 dict[element] = count;
         }
-
         return dict.Count == 0;
     }
-
     public static bool SequenceEqualOrderIgnore<T>(this IEnumerable<T> first, IEnumerable<T> second)
     {
         return SequenceEqualOrderIgnore<T>(first, second, EqualityComparer<T>.Default);

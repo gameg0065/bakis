@@ -6,7 +6,6 @@ namespace UnitTestGeneration.Moderate.App;
 public class ValidateArray
 {
     #region 15º ValidMountainArray
-
     public bool ValidMountainArray(int[] arr)
     {
         // new[] { 0,2,3,2,1};

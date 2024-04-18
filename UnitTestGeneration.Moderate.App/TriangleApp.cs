@@ -11,7 +11,7 @@ public class TriangleApp
         {
             this.height = height;
         }
-
+        
         public void DrawPyramid()
         {
             for (int i = 1; i <= this.height; i++)
@@ -40,7 +40,6 @@ public class TriangleApp
             Console.WriteLine("Operation canceled.");
             return; // exit the method
         }
-
         Triangle pyramid = new Triangle(height);
         Console.WriteLine($"Pyramid created with height: {height}\n");
         pyramid.DrawPyramid();

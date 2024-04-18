@@ -3,11 +3,10 @@ namespace UnitTestGeneration.Moderate.App;
 // cy = 15, co = 23
 public class PrimeNumers
 {
-    private static bool IsNumberEven(int numberToCheck)
+        private static bool IsNumberEven(int numberToCheck)
         {
             return !Convert.ToBoolean(numberToCheck % 2);
         }
-
         private static bool IsNumberPrime(int numberToCheck, int potencialDivider = 3)
         {
             bool primeTestResult = Convert.ToBoolean(numberToCheck % potencialDivider);

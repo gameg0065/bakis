@@ -15,7 +15,6 @@ public class VisualCalculator
     
     public static double BtnEnter_Click(double dblNum1, double dblNum2, Calculator_Opertaions _operation)
     {
-        
         switch (_operation)
         {
             case Calculator_Opertaions.none:

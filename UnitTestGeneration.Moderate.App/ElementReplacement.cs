@@ -31,9 +31,7 @@ public static class ElementReplacement
                 newArray[cont] = result;
             }
         }
-        
         return newArray;
     }
-    
     #endregion
 }
