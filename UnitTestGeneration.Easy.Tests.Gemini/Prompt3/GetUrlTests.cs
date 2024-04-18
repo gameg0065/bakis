@@ -4,20 +4,42 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class GetUrlTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void ExtractRequestType_SimpleUrl_ReturnsCorrectRequestType()
     {
-        // Arrange
+        var uri = new Uri("http://example.com/api/users/");
+        var result = GetUrl.ExtractRequestType(uri);
+        Assert.Equal("users", result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void ExtractRequestType_UrlWithoutTrailingSlash_ReturnsCorrectRequestType()
+    {
+        var uri = new Uri("http://example.com/api/products");
+        var result = GetUrl.ExtractRequestType(uri);
+        Assert.Equal("products", result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void ExtractRequestType_UrlWithMultipleSegments_ReturnsCorrectRequestType()
+    {
+        var uri = new Uri("http://example.com/category/electronics/phones/");
+        var result = GetUrl.ExtractRequestType(uri);
+        Assert.Equal("phones", result);
+    }
+
+    [Fact]
+    public void ExtractRequestType_RootUrl_ReturnsEmptyString()
+    {
+        var uri = new Uri("http://example.com/");
+        var result = GetUrl.ExtractRequestType(uri);
+        Assert.Equal("", result);
+    }
+
+    [Fact]
+    public void ExtractRequestType_NullUrl_ThrowsArgumentNullException()
+    {
+        Uri nullUri = null;
+        Assert.Throws<ArgumentNullException>(() => GetUrl.ExtractRequestType(nullUri));
     }
 }

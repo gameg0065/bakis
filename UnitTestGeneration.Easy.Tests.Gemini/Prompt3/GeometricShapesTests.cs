@@ -4,20 +4,26 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class GeometricShapesTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void Area_ZeroLength_ReturnsZero()
     {
-        // Arrange
+        var result = GeometricShapes.RectangleShape.Area(length: 0);
+        Assert.Equal(0, result.Item1); 
+        Assert.Equal(0, result.Item2); 
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void Area_NegativeValues_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => GeometricShapes.RectangleShape.Area(length: -10));
+        Assert.Throws<ArgumentException>(() => GeometricShapes.RectangleShape.Area(breadth: -5));
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void Area_CustomValues_CalculatesCorrectly()
+    {
+        var result = GeometricShapes.RectangleShape.Area(length: 5, breadth: 8);
+        Assert.Equal(40, result.Item1);
+        Assert.Equal(26, result.Item2);
     }
 }

@@ -4,20 +4,39 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class LoadApplicationTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void FindMonthlyPaymentSize_ZeroSalaries_ReturnsZero()
     {
-        // Arrange
+        ushort salary1 = 0;
+        ushort salary2 = 0;
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        int result = LoanApplication.FindMonthlyPaymentSize(salary1, salary2);
+        Assert.Equal(0, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void FindMonthlyPaymentSize_TypicalSalaries_CalculatesCorrectly()
+    {
+        ushort salary1 = 2000;
+        ushort salary2 = 1500;
+
+        int result = LoanApplication.FindMonthlyPaymentSize(salary1, salary2);
+        Assert.Equal(1050, result); // 3500 / 10 * 3 = 1050 
+    }
+
+    [Fact]
+    public void FindMonthlyPaymentSize_MaxUshortValues_HandlesOverflow()
+    {
+        ushort salary1 = ushort.MaxValue;
+        ushort salary2 = ushort.MaxValue;
+
+        // You have a few options on how to handle this:
+
+        // Option 1: Expect an OverflowException
+        Assert.Throws<OverflowException>(() => LoanApplication.FindMonthlyPaymentSize(salary1, salary2));
+
+        // Option 2: Change the return type of the method (e.g., to 'long') to accommodate the calculation
+
+        // Option 3: Decide on a maximum monthly payment and clamp or throw an exception if it's exceeded
     }
 }

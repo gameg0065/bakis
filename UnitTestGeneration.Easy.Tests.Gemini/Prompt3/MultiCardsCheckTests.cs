@@ -4,20 +4,52 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class MultiCardsCheckTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void CheckForMultiCards_EmptyArray_ReturnsZero()
     {
-        // Arrange
+        string[] valueCounters = new string[0];
+        int valueCount = 2;
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+        int result = MultiCardsCheck.CheckForMultiCards(valueCounters, valueCount);
+        Assert.Equal(0, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void CheckForMultiCards_NoMatches_ReturnsZero()
+    {
+        string[] valueCounters = { "card1|1", "card2|3", "card3|5" };
+        int valueCount = 2;
+
+        int result = MultiCardsCheck.CheckForMultiCards(valueCounters, valueCount);
+        Assert.Equal(0, result);
+    }
+
+    [Fact]
+    public void CheckForMultiCards_SingleMatch_ReturnsOne()
+    {
+        string[] valueCounters = { "card1|1", "card2|2", "card3|5" };
+        int valueCount = 2;
+
+        int result = MultiCardsCheck.CheckForMultiCards(valueCounters, valueCount);
+        Assert.Equal(1, result);
+    }
+
+    [Fact]
+    public void CheckForMultiCards_MultipleMatches_ReturnsCorrectCount()
+    {
+        string[] valueCounters = { "card1|3", "card2|2", "card3|3", "card4|3" };
+        int valueCount = 3;
+
+        int result = MultiCardsCheck.CheckForMultiCards(valueCounters, valueCount);
+        Assert.Equal(3, result);
+    }
+
+    [Fact]
+    public void CheckForMultiCards_InvalidInput_HandlesException()
+    {
+        string[] valueCounters = { "card1|x", "card2|2", "card3|5" }; // 'x' is not a number
+        int valueCount = 2;
+
+        Assert.Throws<FormatException>(() => MultiCardsCheck.CheckForMultiCards(valueCounters, valueCount));
     }
 }

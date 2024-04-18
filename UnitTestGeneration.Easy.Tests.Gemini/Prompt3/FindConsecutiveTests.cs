@@ -4,20 +4,51 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class FindConsecutiveTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void FindMaxConsecutiveOnes_EmptyArray_ReturnsZero()
     {
-        // Arrange
+        int[] nums = new int[0];
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(0, result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void FindMaxConsecutiveOnes_AllZeros_ReturnsZero()
+    {
+        int[] nums = { 0, 0, 0, 0 };
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(0, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void FindMaxConsecutiveOnes_SingleOne_ReturnsOne()
+    {
+        int[] nums = { 1 };
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(1, result);
+    }
+
+    [Fact]
+    public void FindMaxConsecutiveOnes_MultipleSequences_ReturnsCorrectMax()
+    {
+        int[] nums = { 1, 1, 0, 1, 1, 1 };
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(3, result);
+    }
+
+    [Fact]
+    public void FindMaxConsecutiveOnes_ConsecutiveAtBeginning_ReturnsCorrectMax()
+    {
+        int[] nums = { 1, 1, 1, 0, 1 };
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(3, result);
+    }
+
+    [Fact]
+    public void FindMaxConsecutiveOnes_ConsecutiveAtEnd_ReturnsCorrectMax()
+    {
+        int[] nums = { 0, 1, 1, 1, 1 };
+        var result = FindConsecutive.FindMaxConsecutiveOnes(nums);
+        Assert.Equal(4, result);
     }
 }

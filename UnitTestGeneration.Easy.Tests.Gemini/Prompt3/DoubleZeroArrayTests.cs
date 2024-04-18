@@ -4,20 +4,46 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class DoubleZeroArrayTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void DuplicateZeros_EmptyArray_ReturnsEmptyArray()
     {
-        // Arrange
+        int[] arr = new int[0];
+        int[] result = DoubleZeroArray.DuplicateZeros(arr);
+        Assert.Equal(new int[0], result); // Or use Assert.Empty(result)
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void DuplicateZeros_NoZeros_ReturnsOriginalArray()
+    {
+        int[] arr = { 1, 2, 5, 8 };
+        int[] result = DoubleZeroArray.DuplicateZeros(arr);
+        Assert.Equal(arr, result);
+    }
 
-        // Assert
+    [Fact]
+    public void DuplicateZeros_SingleZero_DuplicatesCorrectly()
+    {
+        int[] arr = { 1, 0, 3 };
+        int[] expected = { 1, 0, 0, 3 };
+        int[] result = DoubleZeroArray.DuplicateZeros(arr);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void DuplicateZeros_MultipleZeros_DuplicatesCorrectly()
+    {
+        int[] arr = { 1, 0, 2, 3, 0, 4 };
+        int[] expected = { 1, 0, 0, 2, 3, 0, 0, 4 };
+        int[] result = DoubleZeroArray.DuplicateZeros(arr);
+        Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void DuplicateZeros_ZerosAtEnd_DuplicatesCorrectly()
+    {
+        int[] arr = { 1, 2, 0, 0 };
+        int[] expected = { 1, 2, 0, 0 }; 
+        int[] result = DoubleZeroArray.DuplicateZeros(arr);
         Assert.Equal(expected, result);
     }
 }

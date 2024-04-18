@@ -1,23 +1,51 @@
+using System.Data;
 using UnitTestGeneration.Easy.App;
 
 namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class EvaluationsTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void Evaluate_SimpleAddition_ReturnsCorrectResult()
     {
-        // Arrange
+        var result = Evaluations.Evaluate("2 + 3");
+        Assert.Equal(5m, result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void Evaluate_SimpleSubtraction_ReturnsCorrectResult()
+    {
+        var result = Evaluations.Evaluate("10 - 5");
+        Assert.Equal(5m, result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void Evaluate_MultiplicationAndDivision_ReturnsCorrectResult()
+    {
+        var result = Evaluations.Evaluate("6 * 2 / 3");
+        Assert.Equal(4m, result);
+    }
+
+    [Fact]
+    public void Evaluate_HandlesOrderOfOperations_ReturnsCorrectResult()
+    {
+        var result = Evaluations.Evaluate("2 + 3 * 4"); // Should be 14
+        Assert.Equal(14m, result);
+    }
+
+    [Fact]
+    public void Evaluate_InvalidExpression_ReturnsZero()
+    {
+        var result = Evaluations.Evaluate("a + b");
+        Assert.Equal(0m, result);
+    }
+
+    // Consider adding more tests for decimals, negative numbers, etc.
+
+    // (Optional, if you want to enforce a specific exception type)
+    [Fact]
+    public void Evaluate_InvalidExpression_ThrowsSpecificException()
+    {
+        Assert.Throws<SyntaxErrorException>(() => Evaluations.Evaluate("a + b"));
     }
 }

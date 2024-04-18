@@ -4,20 +4,43 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class CheckForPalindromeTests
 {
-    [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [Fact]
+    public void IsPalindrome_PositivePalindrome_ReturnsTrue()
     {
-        // Arrange
+        int x = 12321;
+        bool result = CheckForPalindrome.IsPalindrome(x);
+        Assert.True(result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void IsPalindrome_NegativePalindrome_ReturnsTrue()
+    {
+        int x = -101;
+        bool result = CheckForPalindrome.IsPalindrome(x);
+        Assert.True(result);
+    }
 
-        // Assert
-        Assert.Equal(expected, result);
+    [Fact]
+    public void IsPalindrome_NonPalindrome_ReturnsFalse()
+    {
+        int x = 1234;
+        bool result = CheckForPalindrome.IsPalindrome(x);
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void IsPalindrome_SingleDigit_ReturnsTrue()
+    {
+        int x = 7;
+        bool result = CheckForPalindrome.IsPalindrome(x);
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void IsPalindrome_Zero_ReturnsTrue()
+    {
+        int x = 0;
+        bool result = CheckForPalindrome.IsPalindrome(x);
+        Assert.True(result);
     }
 }
