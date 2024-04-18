@@ -9,7 +9,7 @@ public class FractionConverters
     decimal inches {get; set;}
     decimal numerator {get; set;}
     decimal denominator {get; set;}
-    static decimal SafeDivision(decimal numerator, decimal denominator)
+    public static decimal SafeDivision(decimal numerator, decimal denominator)
     {
         if (numerator == 0 || denominator == 0)
             throw new DivideByZeroException();
