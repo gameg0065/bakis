@@ -1,17 +1,38 @@
-using UnitTestGeneration.Easy.App;
+using UnitTestGeneration.Moderate.App;
 
 namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 
-public class LoadApplicationTests
+public class LoanApplicationTests
 {
-    [Theory]
-    [InlineData(5000, 3000, 2400)]  // Basic Calculation
-    [InlineData(20000, 15000, 10500)] // Large Salaries
-    [InlineData(0, 10000, 3000)]    // Zero Salary
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 19500)] // Max ushort value
-    public void FindMonthlyPaymentSize_CalculatesCorrectly(ushort salary1, ushort salary2, int expected)
+    [Fact]
+    public void BothAdultsEligible_NoKids_ReturnsTrue()
     {
-        int result = LoanApplication.FindMonthlyPaymentSize(salary1, salary2);
-        Assert.Equal(expected, result);
+        bool result = LoanApplication.CanGetFamilyLoan(18, 25); 
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void BothAdultsEligible_WithKids_ReturnsTrue()
+    {
+        bool result = LoanApplication.CanGetFamilyLoan(20, 35, true); 
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void OneAdultIneligible_ReturnsFalse()
+    {
+        bool result = LoanApplication.CanGetFamilyLoan(16, 20);
+        Assert.False(result);
+
+        // Same test with kids - shouldn't change the outcome
+        result = LoanApplication.CanGetFamilyLoan(16, 20, true);
+        Assert.False(result); 
+    }
+
+    [Fact]
+    public void AgesBelowThreshold_WithKids_ReturnsFalse()
+    {
+        bool result = LoanApplication.CanGetFamilyLoan(18, 20, true);
+        Assert.False(result);
     }
 }

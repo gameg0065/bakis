@@ -1,6 +1,6 @@
 namespace UnitTestGeneration.Easy.Tests.Cloude;
 
-public class CheckForPalindromeTests
+public class FindNumberWithEvenDigitsNum
 {
-   
+
 }

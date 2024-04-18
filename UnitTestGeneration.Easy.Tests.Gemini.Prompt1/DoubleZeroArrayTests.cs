@@ -5,19 +5,22 @@ namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt1;
 public class DoubleZeroArrayTests
 {
     [Theory]
-    [InlineData(0, 0, 0)] // Edge case: both salaries are zero
-    [InlineData(1000, 2000, 900)] // Typical scenario
-    [InlineData(ushort.MaxValue, ushort.MaxValue, 13106)] // Edge case: maximum values
-    [InlineData(ushort.MaxValue, 0, 6553)] // Edge case: one person has maximum salary, the other has zero
-    [InlineData(0, ushort.MaxValue, 6553)] // Edge case: one person has zero salary, the other has maximum salary
-    public void FindMonthlyPaymentSize_ReturnsCorrectValue(ushort firstPersonSalary, ushort secondPersonSalary, int expected)
+    [InlineData(new int[] { 1, 0, 2, 3, 0, 4, 5, 0 }, new int[] { 1, 0, 0, 2, 3, 0, 0, 4 })]
+    [InlineData(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 })]
+    [InlineData(new int[] { 0, 0, 1 }, new int[] { 0, 0, 0, 0, 1 })]
+    public void DuplicateZeros_ModifiesArrayCorrectly(int[] input, int[] expected) 
     {
-        // Arrange
+        int[] result = DoubleZeroArray.DuplicateZeros(input);
+        Assert.Equal(expected, result);
+    }
 
-        // Act
-        int result = LoanApplication.FindMonthlyPaymentSize(firstPersonSalary, secondPersonSalary);
+    [Fact]
+    public void EmptyArray_ReturnsEmptyArray()
+    {
+        int[] input = new int[] { };
+        int[] expected = new int[] { };
 
-        // Assert
+        int[] result = DoubleZeroArray.DuplicateZeros(input);
         Assert.Equal(expected, result);
     }
 }
