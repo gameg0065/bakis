@@ -1,7 +1,7 @@
 namespace UnitTestGeneration.Moderate.App;
 // https://github.com/Mathias007/c-sharp-primary-projects/blob/master/PrimeNumbers/PrimeNumbers/PrimeNumbers.cs
 // cy = 15, co = 23
-public static class PrimeNumers
+public static class PrimeNumbers
 {
         public static bool IsNumberEven(int numberToCheck)
         {

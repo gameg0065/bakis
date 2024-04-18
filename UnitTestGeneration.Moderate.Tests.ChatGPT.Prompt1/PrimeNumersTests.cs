@@ -22,7 +22,7 @@ public class PrimeNumersTests
     public void PrimeTest_ReturnsExpectedResult(int numberToCheck, bool expectedResult)
     {
         // Act
-        bool result = PrimeNumers.PrimeTest(numberToCheck);
+        bool result = PrimeNumbers.PrimeTest(numberToCheck);
 
         // Assert
         Assert.Equal(expectedResult, result);
@@ -46,7 +46,7 @@ public class PrimeNumersTests
     public void IsNumberPrime_ReturnsExpectedResult(int numberToCheck, bool expectedResult)
     {
         // Act
-        bool result = PrimeNumers.IsNumberPrime(numberToCheck);
+        bool result = PrimeNumbers.IsNumberPrime(numberToCheck);
 
         // Assert
         Assert.Equal(expectedResult, result);
@@ -67,7 +67,7 @@ public class PrimeNumersTests
     public void IsNumberEven_ReturnsExpectedResult(int numberToCheck, bool expectedResult)
     {
         // Act
-        bool result = PrimeNumers.IsNumberEven(numberToCheck);
+        bool result = PrimeNumbers.IsNumberEven(numberToCheck);
 
         // Assert
         Assert.Equal(expectedResult, result);

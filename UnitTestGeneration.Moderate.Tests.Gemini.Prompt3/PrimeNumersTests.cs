@@ -2,7 +2,7 @@ using UnitTestGeneration.Moderate.App;
 
 namespace UnitTestGeneration.Moderate.Tests.Gemini.Prompt3;
 
-public class PrimeNumersTests
+public class PrimeNumbersTests
 {
     // Tests for IsNumberEven
         [Fact]
@@ -12,7 +12,7 @@ public class PrimeNumersTests
             int numberToCheck = 0;
 
             // Act
-            bool result = PrimeNumers.IsNumberEven(numberToCheck);
+            bool result = PrimeNumbers.IsNumberEven(numberToCheck);
 
             // Assert
             Assert.True(result);
@@ -25,7 +25,7 @@ public class PrimeNumersTests
             int numberToCheck = 8;
 
             // Act
-            bool result = PrimeNumers.IsNumberEven(numberToCheck);
+            bool result = PrimeNumbers.IsNumberEven(numberToCheck);
 
             // Assert
             Assert.True(result);
@@ -38,7 +38,7 @@ public class PrimeNumersTests
             int numberToCheck = 7;
 
             // Act
-            bool result = PrimeNumers.IsNumberEven(numberToCheck);
+            bool result = PrimeNumbers.IsNumberEven(numberToCheck);
 
             // Assert
             Assert.False(result);
@@ -52,7 +52,7 @@ public class PrimeNumersTests
             int numberToCheck = 7;
 
             // Act
-            bool result = PrimeNumers.IsNumberPrime(numberToCheck);
+            bool result = PrimeNumbers.IsNumberPrime(numberToCheck);
 
             // Assert
             Assert.True(result);
@@ -65,7 +65,7 @@ public class PrimeNumersTests
             int numberToCheck = 9;
 
             // Act
-            bool result = PrimeNumers.IsNumberPrime(numberToCheck);
+            bool result = PrimeNumbers.IsNumberPrime(numberToCheck);
 
             // Assert
             Assert.False(result);
@@ -81,7 +81,7 @@ public class PrimeNumersTests
             int numberToCheck = 0;
 
             // Act
-            bool result = PrimeNumers.PrimeTest(numberToCheck);
+            bool result = PrimeNumbers.PrimeTest(numberToCheck);
 
             // Assert
             Assert.False(result);
@@ -94,7 +94,7 @@ public class PrimeNumersTests
             int numberToCheck = 1;
 
             // Act
-            bool result = PrimeNumers.PrimeTest(numberToCheck);
+            bool result = PrimeNumbers.PrimeTest(numberToCheck);
 
             // Assert
             Assert.False(result);
@@ -107,7 +107,7 @@ public class PrimeNumersTests
             int numberToCheck = 2;
 
             // Act
-            bool result = PrimeNumers.PrimeTest(numberToCheck);
+            bool result = PrimeNumbers.PrimeTest(numberToCheck);
 
             // Assert
             Assert.True(result);
