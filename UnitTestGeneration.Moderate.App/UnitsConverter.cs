@@ -1,4 +1,4 @@
-namespace UnitTestGeneration.Difficult.App;
+namespace UnitTestGeneration.Moderate.App;
 
 // https://github.com/scourii/HieloCalculator/blob/main/Hielo/ConvertUnits.cs
 // cy = 29, co = 2

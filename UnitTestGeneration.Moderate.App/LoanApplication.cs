@@ -1,4 +1,4 @@
-namespace UnitTestGeneration.Difficult.App;
+namespace UnitTestGeneration.Moderate.App;
 
 public static class LoanApplication
 {

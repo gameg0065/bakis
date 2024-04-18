@@ -1,6 +1,6 @@
-using UnitTestGeneration.Difficult.App;
+using UnitTestGeneration.Moderate.App;
 
-namespace UnitTestGeneration.Difficult.Tests.Gemini.Prompt1;
+namespace UnitTestGeneration.Moderate.Tests.Gemini.Prompt3;
 
 public class UnitsConverterTests
 {
