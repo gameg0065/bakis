@@ -2,6 +2,7 @@ namespace UnitTestGeneration.Difficult.App;
 
 // https://github.com/IamREGZ/PokerGame/blob/master/Program.cs
 // cy = 19, co = 7
+
 public class CardDeckCreator
 {
     static readonly Random rand = new Random();

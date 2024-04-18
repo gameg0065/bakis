@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Cloude", "UnitTestGeneration.Moderate.Tests.Cloude\UnitTestGeneration.Moderate.Tests.Cloude.csproj", "{F3E5CC8D-94F7-406A-A5E7-DB77873EC6E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini", "UnitTestGeneration.Difficult.Tests.Gemini\UnitTestGeneration.Difficult.Tests.Gemini.csproj", "{7495BF9C-AEA8-414C-A628-8515287CF885}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini.Prompt1", "UnitTestGeneration.Difficult.Tests.Gemini.Prompt1\UnitTestGeneration.Difficult.Tests.Gemini.Prompt1.csproj", "{7495BF9C-AEA8-414C-A628-8515287CF885}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Cloude", "UnitTestGeneration.Difficult.Tests.Cloude\UnitTestGeneration.Difficult.Tests.Cloude.csproj", "{1D88D930-A22C-423E-90F5-8BF1B112F33C}"
 EndProject
@@ -34,6 +34,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini.Prompt2", "UnitTestGeneration.Moderate.Tests.Gemini.Prompt2\UnitTestGeneration.Moderate.Tests.Gemini.Prompt2.csproj", "{B6604319-A64C-4F32-B98B-7B355DDE6441}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini.Prompt3", "UnitTestGeneration.Moderate.Tests.Gemini.Prompt3\UnitTestGeneration.Moderate.Tests.Gemini.Prompt3.csproj", "{DAE612CA-A240-402C-9567-DD46FCBE740A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini.Prompt2", "UnitTestGeneration.Difficult.Tests.Gemini.Prompt2\UnitTestGeneration.Difficult.Tests.Gemini.Prompt2.csproj", "{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini.Prompt3", "UnitTestGeneration.Difficult.Tests.Gemini.Prompt3\UnitTestGeneration.Difficult.Tests.Gemini.Prompt3.csproj", "{F51EE258-269D-41C9-80D6-61FF38878269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,5 +112,13 @@ Global
 		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51EE258-269D-41C9-80D6-61FF38878269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51EE258-269D-41C9-80D6-61FF38878269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51EE258-269D-41C9-80D6-61FF38878269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51EE258-269D-41C9-80D6-61FF38878269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

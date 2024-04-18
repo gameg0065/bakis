@@ -31,10 +31,3 @@ public static class LoanApplication
         return new Tuple<bool, int>(false, 0);
     }
 }
-
-
-// kodo charakteristikas
-
-// SonarCube ir t.t.
-// Ciklomatini, coupling (3 testas) ir kohesion. - 4.
-// Koda generuoja irankis 1 = 1 ?
