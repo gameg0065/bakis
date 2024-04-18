@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Cloude", "UnitTestGeneration.Easy.Tests.Cloude\UnitTestGeneration.Easy.Tests.Cloude.csproj", "{4289AA3E-3001-498F-84AE-33C9862F5D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini", "UnitTestGeneration.Moderate.Tests.Gemini\UnitTestGeneration.Moderate.Tests.Gemini.csproj", "{6AADFB04-1B28-4711-9AE8-5DDEF8114438}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini.Prompt1", "UnitTestGeneration.Moderate.Tests.Gemini.Prompt1\UnitTestGeneration.Moderate.Tests.Gemini.Prompt1.csproj", "{6AADFB04-1B28-4711-9AE8-5DDEF8114438}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.ChatGPT", "UnitTestGeneration.Moderate.Tests.ChatGPT\UnitTestGeneration.Moderate.Tests.ChatGPT.csproj", "{2CD262F9-7568-4988-9CC7-0A455F257B76}"
 EndProject
@@ -30,6 +30,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Gemini.Prompt2", "UnitTestGeneration.Easy.Tests.Gemini.Prompt2\UnitTestGeneration.Easy.Tests.Gemini.Prompt2.csproj", "{7B62D389-6A31-4667-B244-0ED56DCF3886}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Gemini.Prompt3", "UnitTestGeneration.Easy.Tests.Gemini.Prompt3\UnitTestGeneration.Easy.Tests.Gemini.Prompt3.csproj", "{373914B6-06DC-4F7C-AB2C-2EDE437EA270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini.Prompt2", "UnitTestGeneration.Moderate.Tests.Gemini.Prompt2\UnitTestGeneration.Moderate.Tests.Gemini.Prompt2.csproj", "{B6604319-A64C-4F32-B98B-7B355DDE6441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.Gemini.Prompt3", "UnitTestGeneration.Moderate.Tests.Gemini.Prompt3\UnitTestGeneration.Moderate.Tests.Gemini.Prompt3.csproj", "{DAE612CA-A240-402C-9567-DD46FCBE740A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,5 +100,13 @@ Global
 		{373914B6-06DC-4F7C-AB2C-2EDE437EA270}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{373914B6-06DC-4F7C-AB2C-2EDE437EA270}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{373914B6-06DC-4F7C-AB2C-2EDE437EA270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6604319-A64C-4F32-B98B-7B355DDE6441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6604319-A64C-4F32-B98B-7B355DDE6441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6604319-A64C-4F32-B98B-7B355DDE6441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6604319-A64C-4F32-B98B-7B355DDE6441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE612CA-A240-402C-9567-DD46FCBE740A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
