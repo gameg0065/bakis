@@ -1,9 +1,10 @@
 namespace UnitTestGeneration.Difficult.App;
 // https://github.com/Youssef155/PRODIGY_SD_04/blob/master/SudokuSolver/SolvingTheGrid.cs
 // cy = 21, co = 33
-public class SudokuSolver
+
+public static class SudokuSolver
 {
-    static int[][] board = [[0, 1, 0, 2, 0, 0, 0, 0, 4],
+    public static int[][] board = [[0, 1, 0, 2, 0, 0, 0, 0, 4],
                                 [5, 0, 0, 9, 0, 0, 0, 1, 0],
                                 [0, 6, 4, 0, 0, 0, 0, 0, 0],
                                 [0, 0, 0, 0, 0, 6, 0, 4, 0],
@@ -36,7 +37,7 @@ public class SudokuSolver
         //
         // }
 
-        private static bool SolveTheGrid(int[][] grid)
+        public static bool SolveTheGrid(int[][] grid)
         {
             if (FindEmpty(grid) == null)
             {
@@ -68,7 +69,7 @@ public class SudokuSolver
         }
 
 
-        private static int[]? FindEmpty(int[][] grid)
+        public static int[]? FindEmpty(int[][] grid)
         {
             int[] arr = [0, 0];
             for (int i = 0; i < grid.Length; i++)
@@ -85,7 +86,7 @@ public class SudokuSolver
             return null;
         }
 
-        private static bool IsPossible(int[][] grid, int[]? arr, int num)
+        public static bool IsPossible(int[][] grid, int[]? arr, int num)
         {
             for (int i = 0; i < 9; i++)
             {

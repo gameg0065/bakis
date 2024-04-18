@@ -2,6 +2,7 @@ namespace UnitTestGeneration.Difficult.App;
 
 // https://github.com/LandSharkFive/StatOne/blob/main/StatOne/Util.cs
 // cy = 20, co = 6
+
 public static class StatOne
 {
     public static double Variance(this double[] source)

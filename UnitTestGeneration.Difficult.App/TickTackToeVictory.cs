@@ -3,8 +3,7 @@ namespace UnitTestGeneration.Difficult.App;
 // cy = 16, co = 9
 public class TickTackToeVictory
 {
-    string[] grid = new string[9] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-    bool CheckVictory()
+    public bool CheckVictory(string[] grid)
     {
         bool row1 = grid[0] == grid[1] && grid[1] == grid[2];
         bool row2 = grid[3] == grid[4] && grid[4] == grid[5];

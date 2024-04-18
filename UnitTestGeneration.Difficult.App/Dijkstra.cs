@@ -2,11 +2,12 @@ namespace UnitTestGeneration.Difficult.App;
 
 // https://github.com/Mathias007/c-sharp-primary-projects/blob/master/Dijkistra/Dijkistra/Dijkistra.cs
 // cy = 19, co = 20
-public class Dijkstra
-{
-    static readonly int vertexQuantity = 9;
 
-    static int FindMinDistance(int[] dist,bool[] sptSet)
+public static class Dijkstra
+{
+    public static readonly int vertexQuantity = 9;
+
+    public static int FindMinDistance(int[] dist,bool[] sptSet)
     {
         int min = int.MaxValue, minIndex = -1;
 
@@ -20,7 +21,7 @@ public class Dijkstra
         return minIndex;
     }
 
-    static void PrintSolution(int[] dist, int n)
+    public static void PrintSolution(int[] dist, int n)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("Rezultat zastosowania Algorytmu Dijkistry:");
@@ -32,7 +33,7 @@ public class Dijkstra
         Console.ForegroundColor = ConsoleColor.Gray;
     }
 
-    static void UseDijkstraAlgorithm(int[,] graph, int src)
+    public static void UseDijkstraAlgorithm(int[,] graph, int src)
     {
         int[] dist = new int[vertexQuantity]; 
         bool[] sptSet = new bool[vertexQuantity];
@@ -60,7 +61,7 @@ public class Dijkstra
         PrintSolution(dist, vertexQuantity);
     }
 
-    static void PrintGraph(int[,] graph)
+    public static void PrintGraph(int[,] graph)
     {
         int graphWidth = graph.GetLength(0);
         int graphHeight = graph.GetLength(1);

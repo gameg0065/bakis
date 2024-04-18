@@ -2,13 +2,13 @@ namespace UnitTestGeneration.Difficult.App;
 
 public static class LoanApplication
 {
-    static bool CanGetFamilyLoan(int firstPersonAge, int secondPersonAge)
+    public static bool CanGetFamilyLoan(int firstPersonAge, int secondPersonAge)
     {
         const int legalAge = 17;
         return firstPersonAge > legalAge && secondPersonAge > legalAge;
     }
     
-    static int FindMonthlyPaymentSize(int firstPersonSalary, int secondPersonSalary)
+    public static int FindMonthlyPaymentSize(int firstPersonSalary, int secondPersonSalary)
     {
         var sum = (firstPersonSalary + secondPersonSalary) / 10 * 3;
         return sum;

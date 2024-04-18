@@ -1,6 +1,6 @@
 namespace UnitTestGeneration.Difficult.Tests.Gemini.Prompt1;
 
-public class TrigCalculatorTests
+public class UnitsConverterTests
 {
     
 }

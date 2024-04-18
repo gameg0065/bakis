@@ -3,11 +3,11 @@ namespace UnitTestGeneration.Difficult.App;
 // https://github.com/IamREGZ/PokerGame/blob/master/Program.cs
 // cy = 19, co = 7
 
-public class CardDeckCreator
+public static class CardDeckCreator
 {
     static readonly Random rand = new Random();
     
-    sealed class Card
+    public sealed class Card
     {
         #region Properties
         public string CardValue { get; set; }
@@ -24,7 +24,7 @@ public class CardDeckCreator
         #endregion
     }
     
-    private static string ConvertValue(int num)
+    public static string ConvertValue(int num)
     {
         switch (num)
         {
@@ -42,7 +42,7 @@ public class CardDeckCreator
     }
     
     // Method to convert numeric value to suit characters.
-    private static char ConvertSuit(int num)
+    public static char ConvertSuit(int num)
     {
         switch (num)
         {
@@ -60,7 +60,7 @@ public class CardDeckCreator
     }
     
     // Method to set card deck in a randomized order.
-    private static Card[] SetCardDeck(bool isHand = false)
+    public static Card[] SetCardDeck(bool isHand = false)
     {
         string cardDeckInput = "";
         Card[] cardDeck = new Card[isHand ? 5 : 52];

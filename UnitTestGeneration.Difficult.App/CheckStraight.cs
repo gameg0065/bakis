@@ -3,9 +3,9 @@ namespace UnitTestGeneration.Difficult.App;
 // https://github.com/IamREGZ/PokerGame/blob/master/Program.cs
 // cy = 19, co 15
 
-public class CheckStraight
+public static class CheckStraight
 {
-    sealed class Card
+    public sealed class Card
     {
         #region Properties
         public string CardValue { get; set; }
@@ -22,7 +22,7 @@ public class CheckStraight
         #endregion
     }
     
-    private static string ConvertValue(int num)
+    public static string ConvertValue(int num)
     {
         switch (num)
         {
@@ -39,7 +39,7 @@ public class CheckStraight
         }
     }
     
-    private static bool CheckForStraight(Card[] cardHand)
+    public static bool CheckForStraight(Card[] cardHand)
     {
         int currentValue = 0, endValue = 0;
 
@@ -86,7 +86,7 @@ public class CheckStraight
         return true;
     }
     
-    private static bool SearchCardValue(string value, Card[] cardHand)
+    public static bool SearchCardValue(string value, Card[] cardHand)
     {
         return cardHand.Count(card => card.CardValue == value) > 0;
     }

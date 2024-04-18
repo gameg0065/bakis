@@ -1,6 +1,6 @@
 namespace UnitTestGeneration.Difficult.Tests.Gemini.Prompt3;
 
-public class TrigCalculatorTests
+public class EigenvalueTests
 {
-    
+
 }

@@ -7,7 +7,7 @@ namespace UnitTestGeneration.Difficult.App;
 public class ChaCha
 {
         // The input is 64 bytes (512 bits).
-        private uint[] Input = new uint[16];
+        public uint[] Input = new uint[16];
 
 
         /// <summary>
@@ -16,7 +16,7 @@ public class ChaCha
         /// <param name="x">byte[]</param>
         /// <param name="i">int</param>
         /// <returns>uint</returns>
-        private uint Load32(byte[] x, int i)
+        public uint Load32(byte[] x, int i)
         {
             return (UInt32)(x[i] | (x[i + 1] << 8) | (x[i + 2] << 16) | (x[i + 3] << 24));
         }
@@ -27,7 +27,7 @@ public class ChaCha
         /// <param name="x">byte[]</param>
         /// <param name="i">int</param>
         /// <param name="u">uint</param>
-        private void Store32(byte[] x, int i, uint u)
+        public void Store32(byte[] x, int i, uint u)
         {
             x[i] = (byte)(u & 0xff);
             u >>= 8;
@@ -189,7 +189,7 @@ public class ChaCha
         /// <param name="b">int</param>
         /// <param name="c">int</param>
         /// <param name="d">int</param>
-        private void Round(ref uint a, ref uint b, ref uint c, ref uint d)
+        public void Round(ref uint a, ref uint b, ref uint c, ref uint d)
         {
             // The compiler generates better code with references.
             a += b;
@@ -203,7 +203,7 @@ public class ChaCha
         }
 
         // Rotate value left by count bits.
-        private uint RotateLeft(uint value, int count)
+        public uint RotateLeft(uint value, int count)
         {
             return (value << count) | (value >> (32 - count));
         }
@@ -214,7 +214,7 @@ public class ChaCha
         /// <param name="key">byte[]</param>
         /// <param name="nonce">byte[]</param>
         /// <returns>uint[]</returns>
-        private uint[] Init(byte[] key, byte[] nonce)
+        public uint[] Init(byte[] key, byte[] nonce)
         {
             var result = new uint[16];
 
