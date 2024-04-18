@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.App", "UnitTestGeneration.Difficult.App\UnitTestGeneration.Difficult.App.csproj", "{907B7A61-0901-4FC3-BA3D-F318AEF64A98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.ChatGPT", "UnitTestGeneration.Easy.Tests.ChatGPT\UnitTestGeneration.Easy.Tests.ChatGPT.csproj", "{9C287B39-D45A-4DEF-94EF-F8E70EB2736D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1", "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1\UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1.csproj", "{9C287B39-D45A-4DEF-94EF-F8E70EB2736D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Cloude", "UnitTestGeneration.Easy.Tests.Cloude\UnitTestGeneration.Easy.Tests.Cloude.csproj", "{4289AA3E-3001-498F-84AE-33C9862F5D29}"
 EndProject
@@ -38,6 +38,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini.Prompt2", "UnitTestGeneration.Difficult.Tests.Gemini.Prompt2\UnitTestGeneration.Difficult.Tests.Gemini.Prompt2.csproj", "{54F5B2A4-CB1D-44B7-9660-0E474EE3E29D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Gemini.Prompt3", "UnitTestGeneration.Difficult.Tests.Gemini.Prompt3\UnitTestGeneration.Difficult.Tests.Gemini.Prompt3.csproj", "{F51EE258-269D-41C9-80D6-61FF38878269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt2", "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt2\UnitTestGeneration.Easy.Tests.ChatGPT.Prompt2.csproj", "{97C7FA74-8754-49F7-A0CB-C529B1BE3C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt3", "UnitTestGeneration.Easy.Tests.ChatGPT.Prompt3\UnitTestGeneration.Easy.Tests.ChatGPT.Prompt3.csproj", "{01503035-6032-4D77-8086-AD21D0752908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,5 +124,13 @@ Global
 		{F51EE258-269D-41C9-80D6-61FF38878269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F51EE258-269D-41C9-80D6-61FF38878269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F51EE258-269D-41C9-80D6-61FF38878269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C7FA74-8754-49F7-A0CB-C529B1BE3C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C7FA74-8754-49F7-A0CB-C529B1BE3C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C7FA74-8754-49F7-A0CB-C529B1BE3C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C7FA74-8754-49F7-A0CB-C529B1BE3C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01503035-6032-4D77-8086-AD21D0752908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01503035-6032-4D77-8086-AD21D0752908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01503035-6032-4D77-8086-AD21D0752908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01503035-6032-4D77-8086-AD21D0752908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
