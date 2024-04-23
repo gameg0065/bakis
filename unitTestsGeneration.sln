@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.Cloude", "UnitTestGeneration.Difficult.Tests.Cloude\UnitTestGeneration.Difficult.Tests.Cloude.csproj", "{1D88D930-A22C-423E-90F5-8BF1B112F33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.ChatGPT", "UnitTestGeneration.Difficult.Tests.ChatGPT\UnitTestGeneration.Difficult.Tests.ChatGPT.csproj", "{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Gemini.Prompt1", "UnitTestGeneration.Easy.Tests.Gemini.Prompt1\UnitTestGeneration.Easy.Tests.Gemini.Prompt1.csproj", "{86C5C6A1-5AF5-4C07-ABF2-A7ACBE6E4189}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Easy.Tests.Gemini.Prompt2", "UnitTestGeneration.Easy.Tests.Gemini.Prompt2\UnitTestGeneration.Easy.Tests.Gemini.Prompt2.csproj", "{7B62D389-6A31-4667-B244-0ED56DCF3886}"
@@ -46,6 +44,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt2", "UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt2\UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt2.csproj", "{38AE6593-556E-44FB-B108-92D6F2F5992C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt3", "UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt3\UnitTestGeneration.Moderate.Tests.ChatGPT.Prompt3.csproj", "{D847A1B2-F51E-41AF-B6D6-795C24B4D479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1", "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1\UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1.csproj", "{5E393DA3-CB2A-420F-ABE0-4E6DC868E665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2", "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2\UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2.csproj", "{3161490C-6C3B-45D0-9251-51D3C7F27EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3", "UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3\UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3.csproj", "{DFA6FB7C-3FFA-4611-BB11-DAF10E0EE1C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,10 +96,6 @@ Global
 		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D88D930-A22C-423E-90F5-8BF1B112F33C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D2535F1-1BF1-4EE5-BD83-0BDC8481C434}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86C5C6A1-5AF5-4C07-ABF2-A7ACBE6E4189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86C5C6A1-5AF5-4C07-ABF2-A7ACBE6E4189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C5C6A1-5AF5-4C07-ABF2-A7ACBE6E4189}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -144,5 +144,17 @@ Global
 		{D847A1B2-F51E-41AF-B6D6-795C24B4D479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D847A1B2-F51E-41AF-B6D6-795C24B4D479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D847A1B2-F51E-41AF-B6D6-795C24B4D479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E393DA3-CB2A-420F-ABE0-4E6DC868E665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E393DA3-CB2A-420F-ABE0-4E6DC868E665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E393DA3-CB2A-420F-ABE0-4E6DC868E665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E393DA3-CB2A-420F-ABE0-4E6DC868E665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3161490C-6C3B-45D0-9251-51D3C7F27EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3161490C-6C3B-45D0-9251-51D3C7F27EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3161490C-6C3B-45D0-9251-51D3C7F27EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3161490C-6C3B-45D0-9251-51D3C7F27EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA6FB7C-3FFA-4611-BB11-DAF10E0EE1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA6FB7C-3FFA-4611-BB11-DAF10E0EE1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA6FB7C-3FFA-4611-BB11-DAF10E0EE1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA6FB7C-3FFA-4611-BB11-DAF10E0EE1C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
