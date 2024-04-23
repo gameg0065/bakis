@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using UnitTestGeneration.Easy.App;
+namespace UnitTestGeneration.Easy.App;
 
 internal abstract class Program
 {

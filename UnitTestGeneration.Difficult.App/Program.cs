@@ -1,4 +1,4 @@
-﻿using UnitTestGeneration.Difficult.App;
+﻿namespace UnitTestGeneration.Difficult.App;
 
 internal abstract class Program
 {

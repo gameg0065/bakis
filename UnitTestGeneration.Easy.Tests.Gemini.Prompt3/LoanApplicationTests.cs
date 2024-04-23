@@ -1,6 +1,6 @@
 using UnitTestGeneration.Easy.App;
 
-namespace UnitTestGeneration.Moderate.Tests.Gemini.Prompt3;
+namespace UnitTestGeneration.Easy.Tests.Gemini.Prompt3;
 
 public class LoanApplicationTests
 {
