@@ -58,9 +58,7 @@ public static class StatOne
     {
         return (value - mean) / std;
     }
-
-
-
+    
     public static double GetXIntercept(double slope, double yIntercept)
     {
         return -yIntercept / slope;
