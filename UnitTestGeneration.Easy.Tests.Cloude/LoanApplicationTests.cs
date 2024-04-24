@@ -1,6 +1,0 @@
-namespace UnitTestGeneration.Easy.Tests.Cloude;
-
-public class LoadApplicationTests
-{
-    
-}
