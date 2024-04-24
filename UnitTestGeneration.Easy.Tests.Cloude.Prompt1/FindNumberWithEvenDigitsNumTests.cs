@@ -1,6 +1,8 @@
+using UnitTestGeneration.Easy.App;
+
 namespace UnitTestGeneration.Easy.Tests.Cloude.Prompt1;
 
-public class FindNumberWithEvenDigitsNum
+public class FindNumberWithEvenDigitsNumTests
 {
     [Fact]
     public void FindNumbers_AllEvenDigitNumbers_ReturnsLengthOfArray()
@@ -42,11 +44,6 @@ public class FindNumberWithEvenDigitsNum
 
         // Assert
         Assert.Equal(expected, result);
-    }
-
-    private static int FindNumbers(int[] nums)
-    {
-        throw new NotImplementedException();
     }
 
     [Fact]
