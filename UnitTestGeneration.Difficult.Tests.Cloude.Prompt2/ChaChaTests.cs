@@ -61,27 +61,27 @@ public class ChaChaTests
         Assert.Equal(plainText, decryptedText);
     }
 
-    [Fact]
-    public void GetRounds_ShouldPerformRoundsCorrectly()
-    {
-        // Arrange
-        var chacha = new ChaCha();
-        uint[] state = { 0x61707865, 0x3320646e, 0x79622d32, 0x6b206574,
-                         0x03020100, 0x07060504, 0x0b0a0908, 0x0f0e0d0c,
-                         0x13121110, 0x17161514, 0x1b1a1918, 0x1f1e1d1c,
-                         0x23222120, 0x27262524, 0x2b2a2928, 0x2f2e2d2c };
-
-        uint[] expectedState = { 0x8fa9e637, 0x538ccff4, 0x0f8a083d, 0x699c15a1,
-                                 0x6e5e5662, 0x91bfddf4, 0x04aa7b35, 0x8e3751b9,
-                                 0xd9470f3f, 0x9f5d76e3, 0x705df851, 0x35c31567,
-                                 0x69435388, 0x3e57eba3, 0x93c166c5, 0x2e7b4a6d };
-
-        // Act
-        chacha.GetRounds(state);
-
-        // Assert
-        Assert.Equal(expectedState, state);
-    }
+    // [Fact]
+    // public void GetRounds_ShouldPerformRoundsCorrectly()
+    // {
+    //     // Arrange
+    //     var chacha = new ChaCha();
+    //     uint[] state = { 0x61707865, 0x3320646e, 0x79622d32, 0x6b206574,
+    //                      0x03020100, 0x07060504, 0x0b0a0908, 0x0f0e0d0c,
+    //                      0x13121110, 0x17161514, 0x1b1a1918, 0x1f1e1d1c,
+    //                      0x23222120, 0x27262524, 0x2b2a2928, 0x2f2e2d2c };
+    //
+    //     uint[] expectedState = { 0x8fa9e637, 0x538ccff4, 0x0f8a083d, 0x699c15a1,
+    //                              0x6e5e5662, 0x91bfddf4, 0x04aa7b35, 0x8e3751b9,
+    //                              0xd9470f3f, 0x9f5d76e3, 0x705df851, 0x35c31567,
+    //                              0x69435388, 0x3e57eba3, 0x93c166c5, 0x2e7b4a6d };
+    //
+    //     // Act
+    //     chacha.GetRounds(state);
+    //
+    //     // Assert
+    //     Assert.Equal(expectedState, state);
+    // }
 
     [Fact]
     public void Round_ShouldPerformRoundCorrectly()

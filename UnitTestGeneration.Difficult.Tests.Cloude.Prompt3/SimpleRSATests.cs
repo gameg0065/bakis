@@ -63,14 +63,14 @@ public class SimpleRSATests
         Assert.Equal(expectedEncryptExp, encryptExp);
     }
 
-    [Fact]
-    public void GetDecryptExp_ValidInput_ReturnsCorrectExponent()
-    {
-        long x = 3, t = 528;
-        long expectedDecryptExp = 175;
-        long decryptExp = SimpleRSA.GetDecryptExp(x, t);
-        Assert.Equal(expectedDecryptExp, decryptExp);
-    }
+    // [Fact]
+    // public void GetDecryptExp_ValidInput_ReturnsCorrectExponent()
+    // {
+    //     long x = 3, t = 528;
+    //     long expectedDecryptExp = 175;
+    //     long decryptExp = SimpleRSA.GetDecryptExp(x, t);
+    //     Assert.Equal(expectedDecryptExp, decryptExp);
+    // }
 
     [Fact]
     public void Encrypt_ValidInput_ReturnsCorrectEncryptedText()

@@ -7,12 +7,12 @@
 
 ### Prompt 1
 
-dotnet sonarscanner begin /k:"UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_98ab3789f1222b085e4b00019cd2639e233a4f10" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
-dotnet build UnitTestGeneration.Easy.App --no-incremental     
-dotnet dotcover test UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1/UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1.csproj --dcReportType=HTML
-dotnet sonarscanner end /d:sonar.token="sqp_98ab3789f1222b085e4b00019cd2639e233a4f10"   
-rm dotCover.Output.html
-rm -rf dotCover.Output
+#dotnet sonarscanner begin /k:"UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_98ab3789f1222b085e4b00019cd2639e233a4f10" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
+#dotnet build UnitTestGeneration.Easy.App --no-incremental     
+#dotnet dotcover test UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1/UnitTestGeneration.Easy.Tests.ChatGPT.Prompt1.csproj --dcReportType=HTML
+#dotnet sonarscanner end /d:sonar.token="sqp_98ab3789f1222b085e4b00019cd2639e233a4f10"   
+#rm dotCover.Output.html
+#rm -rf dotCover.Output
 
 ### Prompt 2
 #
@@ -61,31 +61,31 @@ rm -rf dotCover.Output
 #rm dotCover.Output.html
 #rm -rf dotCover.Output
 
-# UnitTestGeneration.Difficult.Tests.Gemini.Prompt1
+# UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1
 
 #### Prompt 1
 #
-#dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.Gemini.Prompt1" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_097d2984944d2b193afb98155a1db60efb163f2e" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
-#dotnet build UnitTestGeneration.Difficult.App --no-incremental     
-#dotnet dotcover test UnitTestGeneration.Difficult.Tests.Gemini.Prompt1/UnitTestGeneration.Difficult.Tests.Gemini.Prompt1.csproj --dcReportType=HTML
-#dotnet sonarscanner end /d:sonar.token="sqp_097d2984944d2b193afb98155a1db60efb163f2e"   
-#rm dotCover.Output.html
-#rm -rf dotCover.Output
-#
-#### Prompt 2
-#
-#dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.Gemini.Prompt2" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_989e94110e3d9905ac9a5956c6ef53ee56c59a22" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
-#dotnet build UnitTestGeneration.Difficult.App --no-incremental     
-#dotnet dotcover test UnitTestGeneration.Difficult.Tests.Gemini.Prompt2/UnitTestGeneration.Difficult.Tests.Gemini.Prompt2.csproj --dcReportType=HTML
-#dotnet sonarscanner end /d:sonar.token="sqp_989e94110e3d9905ac9a5956c6ef53ee56c59a22"   
-#rm dotCover.Output.html
-#rm -rf dotCover.Output
-#
-#### Prompt 3
-#
-#dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.Gemini.Prompt3" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_1c5745a6a9995bbcfc67fee5d533f0d27f7d7220" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
-#dotnet build UnitTestGeneration.Difficult.App --no-incremental     
-#dotnet dotcover test UnitTestGeneration.Difficult.Tests.Gemini.Prompt3/UnitTestGeneration.Difficult.Tests.Gemini.Prompt3.csproj --dcReportType=HTML
-#dotnet sonarscanner end /d:sonar.token="sqp_1c5745a6a9995bbcfc67fee5d533f0d27f7d7220"   
-#rm dotCover.Output.html
-#rm -rf dotCover.Output
+dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_dea1e3126eb7c75377697c98fadbe429ba3eb985" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
+dotnet build UnitTestGeneration.Difficult.App --no-incremental     
+dotnet dotcover test UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1/UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt1.csproj --dcReportType=HTML
+dotnet sonarscanner end /d:sonar.token="sqp_dea1e3126eb7c75377697c98fadbe429ba3eb985"   
+rm dotCover.Output.html
+rm -rf dotCover.Output
+
+### Prompt 2
+
+dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_7a95b9cbab7cd92370ffd280bb88d5fb999b6b40" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
+dotnet build UnitTestGeneration.Difficult.App --no-incremental     
+dotnet dotcover test UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2/UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt2.csproj --dcReportType=HTML
+dotnet sonarscanner end /d:sonar.token="sqp_7a95b9cbab7cd92370ffd280bb88d5fb999b6b40"   
+rm dotCover.Output.html
+rm -rf dotCover.Output
+
+### Prompt 3
+
+dotnet sonarscanner begin /k:"UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_3d3ba13409b390c874e84261b530bcabb18521c6" /d:sonar.cs.dotcover.reportsPaths=dotCover.Output.html
+dotnet build UnitTestGeneration.Difficult.App --no-incremental     
+dotnet dotcover test UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3/UnitTestGeneration.Difficult.Tests.ChatGPT.Prompt3.csproj --dcReportType=HTML
+dotnet sonarscanner end /d:sonar.token="sqp_3d3ba13409b390c874e84261b530bcabb18521c6"   
+rm dotCover.Output.html
+rm -rf dotCover.Output

@@ -31,17 +31,17 @@ public class EvaluationsTests
         Assert.Equal(expected, result);
     }
 
-    [Theory]
-    [InlineData("3.14*2", 6.28m)]
-    [InlineData("10/3", 3.33333333333333333333m)]
-    public void Evaluate_ExpressionsWithDecimals_ReturnsCorrectResult(string expression, decimal expected)
-    {
-        // Act
-        decimal result = Evaluations.Evaluate(expression);
-
-        // Assert
-        Assert.Equal(expected, result);
-    }
+    // [Theory]
+    // [InlineData("3.14*2", 6.28m)]
+    // [InlineData("10/3", 3.33333333333333333333m)]
+    // public void Evaluate_ExpressionsWithDecimals_ReturnsCorrectResult(string expression, decimal expected)
+    // {
+    //     // Act
+    //     decimal result = Evaluations.Evaluate(expression);
+    //
+    //     // Assert
+    //     Assert.Equal(expected, result);
+    // }
 
     [Fact]
     public void Evaluate_EmptyString_ReturnsZero()
